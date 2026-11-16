@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Display">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>Smart Display</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;overflow:hidden;color:#fff;-webkit-text-size-adjust:100%}
 body{font-family:-apple-system,"Helvetica Neue","Hiragino Sans",sans-serif;font-weight:300;background:linear-gradient(180deg,#1f5fa0,#4793cc);text-shadow:0 1px 6px rgba(5,20,50,.5)}
-#app{position:absolute;left:50%;top:50%;width:375px;height:667px;display:flex;flex-direction:column;justify-content:space-between;padding:12px 12px 64px;gap:6px;transform:translate(-50%,-50%)}
+#app{position:absolute;left:50%;top:50%;width:375px;height:667px;display:flex;flex-direction:column;justify-content:space-between;padding:calc(env(safe-area-inset-top,0px) + 8px) 12px 16px;gap:6px;transform:translate(-50%,-50%)}
 #hdr{flex:none;height:160px;display:flex;align-items:center;justify-content:space-between;padding:0 4px}
 #right{text-align:right}
 #date{font-size:38px;font-weight:200;line-height:1.1;letter-spacing:.04em}
@@ -33,6 +39,7 @@ body{font-family:-apple-system,"Helvetica Neue","Hiragino Sans",sans-serif;font-
 .hi{font-size:26px;font-weight:400}
 .lo{opacity:.88;font-size:22px}
 .pp{font-size:18px;color:#d6efff;margin-top:2px}
+html,body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 </style>
 </head>
 <body>
