@@ -203,7 +203,7 @@ function renderGraph(){
   [0,6,12,18,24].forEach(function(h){
     s+='<text class="ax" x="'+X(h)+'" y="'+(H-5)+'" text-anchor="'+(h==0?'start':h==24?'end':'middle')+'">'+h+'</text>';
   });
-  [[mx,'最高',26],[mn,'最低',H-8]].forEach(function(e){
+  [[mx,'最高',Y(30)+7],[mn,'最低',Y(0)+7]].forEach(function(e){
     s+='<text x="'+(W-5)+'" y="'+e[2]+'" text-anchor="end" fill="#fff" font-size="22" font-weight="400"><tspan font-size="13" fill-opacity=".85">'+e[1]+' </tspan>'+Math.round(e[0])+'°</text>';
   });
   var lx=Math.min(Math.max(xn,pl+22),pl+pw-22),ly=yn<pt+20?yn+42:yn-26;
